@@ -1,0 +1,21 @@
+version: '3'
+services:
+  api:
+    container_name: api
+    environment:
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_SECRET_ACCESS_KEY=test
+      - AWS_S3_ENDPOINT=http://localstack:4572
+      - ACCOUNT_ENDPOINT=http://account:8088
+      - BIT_GO_EXPRESS=http://express:3080
+      - DATASOURCE_HOST=postgres
+      - DATASOURCE_PORT=5432
+      - DATASOURCE_DB=dw
+      - SPRING_PROFILES_ACTIVE=local,swagger
+
+
+    build:
+      context: ../
+      dockerfile: Dockerfile-dev
+    ports:
+      - '8080:8080'
