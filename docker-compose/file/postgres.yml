@@ -4,6 +4,7 @@ services:
   postgres_name:
     container_name: name-of-db
     image: 'postgres:10.10-alpine'
+    restart: always
     environment:
       POSTGRES_USER: 'postgres'
       POSTGRES_PASSWORD: 'postgres'
