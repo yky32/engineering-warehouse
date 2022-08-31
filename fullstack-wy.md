@@ -22,9 +22,6 @@
 # Frontend
 <details>
   <summary>Expand</summary>
-  - state management
-  `https://recoiljs.org/docs/introduction/getting-started`
-  
-  - material ui
-  `https://mui.com/material-ui`
+  - state management `https://recoiljs.org/docs/introduction/getting-started`  
+  - material ui `https://mui.com/material-ui`
 </details>
