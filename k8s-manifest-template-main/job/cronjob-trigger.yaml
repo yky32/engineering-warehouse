@@ -1,0 +1,47 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: cron
+  namespace: integration
+spec:
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      activeDeadlineSeconds: 600
+      completions: 1
+      template:
+        metadata:
+          labels:
+            env: production
+        spec:
+          containers:
+          - name: cron
+            image: host/registry:image-tag
+            command:
+              - /bin/bash
+              - "-c"
+              - |
+                set -e
+                curl spring-batch-service.integration.svc.cluster.local:8080/trigger-flow-1
+            imagePullPolicy: IfNotPresent
+            env:
+            - name: DEBUG
+              value: "false"
+            resources:
+              limits:
+                memory: 2Gi
+                cpu: '1'
+              requests:
+                memory: 2Gi
+                cpu: '1'
+            volumeMounts:
+              - name: env-data
+                mountPath: /app/etc/.env
+                subPath: app/etc/.env
+          volumes:
+          - name: env-data
+            persistentVolumeClaim:
+              claimName: env
+          restartPolicy: OnFailure
+  schedule: '* * * * *'
+  suspend: false

@@ -1,0 +1,19 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  namespace: integration
+  name: env
+  labels:
+    app: env
+    env: production
+  annotations:
+    volume.beta.kubernetes.io/storage-class: azurefile-csi-nfs
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 100Gi #minimum 100GB
+  storageClassName: azurefile-csi-nfs
+  #storageClassName: ""
+  volumeName: env

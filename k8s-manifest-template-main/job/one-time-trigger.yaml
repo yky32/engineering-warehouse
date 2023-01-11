@@ -1,0 +1,40 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  namespace: integration
+  name: one-time-trigger
+spec:
+  ttlSecondsAfterFinished: 1000
+  template:
+    metadata:
+      labels:
+       env: production
+    spec:
+      shareProcessNamespace: true
+      containers:
+      - name: trigger
+        image: host/registry:image-tag
+        command:
+          - /bin/bash
+          - "-c"
+          - |
+            set -e
+            curl spring-batch-service.integration.svc.cluster.local:8080/trigger-flow-1
+        env:
+          - name: DEBUG
+            value: "false"
+        resources:
+          limits:
+            memory: 2Gi
+            cpu: "1"
+          requests:
+            memory: 1Gi
+            cpu: "500m"
+        volumeMounts:
+          - name: cron-log
+            mountPath: /var/cron/log/
+      volumes:
+      - name: cron-log
+        emptyDir: {}
+      restartPolicy: Never
+  backoffLimit: 0

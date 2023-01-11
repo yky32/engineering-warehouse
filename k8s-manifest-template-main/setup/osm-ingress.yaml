@@ -1,0 +1,33 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-test
+  namespace: integration
+  annotations:
+    kubernetes.io/ingress.class: azure/application-gateway
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: express-application-service
+            port:
+              number: 14001
+---
+kind: IngressBackend
+apiVersion: policy.openservicemesh.io/v1alpha1
+metadata:
+  name: ingressbackend-test
+  namespace: integration
+spec:
+  backends:
+  - name: express-application-service
+    port:
+      number: 14001 # targetPort of httpbin service
+      protocol: http
+  sources:
+  - kind: IPRange
+    name: 10.0.0.0/8

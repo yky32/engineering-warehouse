@@ -1,0 +1,70 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    k8tz.io/injected: "true"
+    k8tz.io/timezone: Asia/Hong_Kong
+  labels:
+    app: express-application
+  name: express-application
+  namespace: integration
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: express-application
+  template:
+    metadata:
+      annotations:
+        k8tz.io/injected: "true"
+        k8tz.io/timezone: Asia/Hong_Kong
+      labels:
+        app: express-application
+        env: fargate
+    spec:
+      serviceAccountName: fargate-execution-sa
+      containers:
+      - env:
+        - name: TZ
+          value: Asia/Hong_Kong
+        image: container-host/registry:image-tag
+        name: express-application
+        ports:
+        - containerPort: 8080
+        resources:
+          limits:
+            cpu: "1"
+            memory: 2Gi
+          requests:
+            cpu: "1"
+            memory: 1Gi
+        volumeMounts:
+        - mountPath: /etc/localtime
+          name: k8tz
+          readOnly: true
+          subPath: Asia/Hong_Kong
+        - mountPath: /usr/share/zoneinfo
+          name: k8tz
+          readOnly: true
+        - mountPath: /usr/src/app/.env
+          name: dotenv
+          subPath: .env
+      initContainers:
+      - args:
+        - bootstrap
+        image: quay.io/k8tz/k8tz:0.3.0
+        name: k8tz
+        resources: {}
+        volumeMounts:
+        - mountPath: /mnt/zoneinfo
+          name: k8tz
+      volumes:
+      - emptyDir: {}
+        name: k8tz
+      - name: dotenv
+        configMap:
+          items:
+          - key: .env
+            path: .env
+          name: express-application-config
+        

@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gs-spring-boot-docker
+  namespace: integration
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gs-spring-boot-docker
+  template:
+    metadata:
+      labels:
+        app: gs-spring-boot-docker
+    spec:
+      containers:
+      - name: gs-spring-boot-docker
+        image: wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest

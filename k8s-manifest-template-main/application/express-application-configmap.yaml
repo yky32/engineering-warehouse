@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: express-application-config
+  namespace: integration
+data:
+  .env: |
+    NODE_ENV = development
+    HOST = 0.0.0.0
+    PORT = 8080
+    LOGGER = dev
+    HTTP_TIMEOUT=600000
+
+    
