@@ -1,5 +1,5 @@
 version: '3'
-
+name: "postgtes"
 services:
   postgres_name:
     container_name: name-of-db
