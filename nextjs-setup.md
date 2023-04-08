@@ -4,7 +4,7 @@ Official Get Started
 > https://nextjs.org/docs
 
 ```bash
-yarn create next-app my-project --typescript
+yarn create next-app --typescript
 ```
 
 Tailwind CSS
