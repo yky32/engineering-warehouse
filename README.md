@@ -23,6 +23,7 @@ https://www.youtube.com/watch?v=KwYqtbSwnH8&t=90s&ab_channel=marsela
 
 # 3. VS Code
 Custom snippets
+`File -> Preferences -> Configure User Snippets -> typerscriptreact.json`
 ```json
 {
 	"Typescript React Function Component": {
