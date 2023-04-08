@@ -6,6 +6,10 @@ A informative warehouse for engineer.
 - [JSON Formatter](https://jsonformatter.curiousconcept.com/)
 - [readme.so](https://readme.so/editor)
 - [Free Faker API](https://jsonplaceholder.typicode.com/)
+- [CRON tab](https://crontab.guru/)
+- [JSON Crack](https://jsoncrack.com/editor)
+- [coolors](https://coolors.co/generate)
+- [converter](https://converter.net/)
 
 
 # 1. set-up terminal and customize
