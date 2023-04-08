@@ -19,3 +19,28 @@ https://www.youtube.com/watch?v=KwYqtbSwnH8&t=90s&ab_channel=marsela
 
 # 2. Git Commit Message
 `https://dev.to/hornet_daemon/git-commit-patterns-5dm7`
+
+
+# 3. VS Code
+Custom snippets
+```json
+{
+	"Typescript React Function Component": {
+		"prefix": "fc",
+		"body": [
+			"import { FC } from 'react'",
+			"",
+			"interface ${TM_FILENAME_BASE}Props {",
+			"  $1",
+			"}",
+			"",
+			"const $TM_FILENAME_BASE: FC<${TM_FILENAME_BASE}Props> = ({$2}) => {",
+			"  return <div>$TM_FILENAME_BASE</div>",
+			"}",
+			"",
+			"export default $TM_FILENAME_BASE"
+		],
+		"description": "Typescript React Function Component"
+	},
+}
+```
