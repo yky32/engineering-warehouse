@@ -20,7 +20,6 @@ https://www.youtube.com/watch?v=KwYqtbSwnH8&t=90s&ab_channel=marsela
 # 2. Git Commit Message
 `https://dev.to/hornet_daemon/git-commit-patterns-5dm7`
 
-
 # 3. VS Code
 Custom snippets
 `File -> Preferences -> Configure User Snippets -> typerscriptreact.json`
@@ -45,3 +44,7 @@ Custom snippets
 	},
 }
 ```
+
+# 4. OAuth Social Set-up
+Google
+- http://localhost:3000/api/auth/callback/google
