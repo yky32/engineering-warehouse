@@ -46,5 +46,5 @@ Custom snippets
 ```
 
 # 4. OAuth Social Set-up
-Google
+Google - `Authorized redirect URIs`
 - http://localhost:3000/api/auth/callback/google
