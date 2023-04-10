@@ -47,4 +47,5 @@ Custom snippets
 
 # 4. OAuth Social Set-up
 Google - `Authorized redirect URIs`
+- https://console.cloud.google.com/apis/dashboard?pli=1
 - http://localhost:3000/api/auth/callback/google
