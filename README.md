@@ -47,6 +47,28 @@ Custom snippets
 `Transform a variable to title-case`
 - https://stackoverflow.com/questions/52874954/when-creating-a-vscode-snippet-how-can-i-transform-a-variable-to-title-case-li
 
+```json
+{
+	"Typescript React Layout Component": {
+	    "prefix": "lc",
+	    "body": [
+	      "import { FC, ReactNode } from 'react'",
+	      "",
+	      "interface ${TM_FILENAME_BASE/([a-z]*)-*([a-z]*)/${1:/capitalize}${2:/capitalize}/g}Props {",
+	      "  children: ReactNode",
+	      "}",
+	      "",
+	      "const ${TM_FILENAME_BASE/([a-z]*)-*([a-z]*)/${1:/capitalize}${2:/capitalize}/g}: FC<${TM_FILENAME_BASE/([a-z]*)-*([a-z]*)/${1:/capitalize}${2:/capitalize}/g}Props> = ({ children }) => {",
+	      "  return <div>{children}</div>",
+	      "}",
+	      "",
+	      "export default $TM_FILENAME_BASE"
+	    ],
+	    "description": "Typescript React Function Component"
+	  },
+}
+```
+
 # 4. OAuth Social Set-up
 Google - `Authorized redirect URIs`
 - https://console.cloud.google.com/apis/dashboard?pli=1
