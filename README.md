@@ -44,6 +44,8 @@ Custom snippets
 	},
 }
 ```
+`Transform a variable to title-case`
+- https://stackoverflow.com/questions/52874954/when-creating-a-vscode-snippet-how-can-i-transform-a-variable-to-title-case-li
 
 # 4. OAuth Social Set-up
 Google - `Authorized redirect URIs`
