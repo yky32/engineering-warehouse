@@ -89,7 +89,7 @@ echo $DOCKER_USER $SVC_NAME
 docker build -t $SVC_NAME .
 ```
 ```
-docker tag $SVC_NAME $DOCKER_USER/$SVC_NAME:latest .
+docker tag $SVC_NAME $DOCKER_USER/$SVC_NAME:latest
 ```
 ```
 docker push $DOCKER_USER/$SVC_NAME 
