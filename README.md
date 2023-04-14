@@ -75,7 +75,12 @@ Google - `Authorized redirect URIs`
 - http://localhost:3000/api/auth/callback/google
 
 # 5. Docker Hub command
-`DOCKER_USER=yky32`
-`SVC_NAME=user-auth-ext`
-`docker build -t $SVC_NAME .`
-`docker tag user-auth-ext $DOCKER_USER/$SVC_NAME:latest .`
+```
+DOCKER_USER=yky32
+
+SVC_NAME=user-auth-ext
+
+docker build -t $SVC_NAME .
+
+docker tag user-auth-ext $DOCKER_USER/$SVC_NAME:latest .
+```
