@@ -10,6 +10,7 @@ A informative warehouse for engineer.
 - [JSON Crack](https://jsoncrack.com/editor)
 - [coolors](https://coolors.co/generate)
 - [converter](https://converter.net/)
+- [patterns.dev](https://www.patterns.dev/)
 
 
 # 1. set-up terminal and customize
