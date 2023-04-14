@@ -73,3 +73,9 @@ Custom snippets
 Google - `Authorized redirect URIs`
 - https://console.cloud.google.com/apis/dashboard?pli=1
 - http://localhost:3000/api/auth/callback/google
+
+# 5. Docker Hub command
+`DOCKER_USER=yky32`
+`SVC_NAME=user-auth-ext`
+`docker build -t $SVC_NAME .`
+`docker tag user-auth-ext $DOCKER_USER/$SVC_NAME:latest .`
