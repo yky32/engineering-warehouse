@@ -80,7 +80,12 @@ DOCKER_USER=yky32
 
 SVC_NAME=user-auth-ext
 
+# Verify
+echo $DOCKER_USER $SVC_NAME
+
 docker build -t $SVC_NAME .
 
 docker tag user-auth-ext $DOCKER_USER/$SVC_NAME:latest .
+
+docker push $DOCKER_USER/$SVC_NAME 
 ```
