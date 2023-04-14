@@ -74,7 +74,7 @@ Google - `Authorized redirect URIs`
 - https://console.cloud.google.com/apis/dashboard?pli=1
 - http://localhost:3000/api/auth/callback/google
 
-# 5. Docker Hub command
+# 5. Local K8s and Docker Hub command
 ```
 DOCKER_USER=yky32
 ```
@@ -93,4 +93,7 @@ docker tag $SVC_NAME $DOCKER_USER/$SVC_NAME:latest
 ```
 ```
 docker push $DOCKER_USER/$SVC_NAME 
+```
+```
+kubectl apply -f ./$SVC_NAME.yaml
 ```
