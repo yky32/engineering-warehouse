@@ -99,3 +99,6 @@ docker push $DOCKER_USER/$SVC_NAME
 ```
 kubectl apply -f ./$SVC_NAME.yaml
 ```
+
+# 6. Git Model
+- https://blog.jetbrains.com/space/2023/04/18/space-git-flow/
