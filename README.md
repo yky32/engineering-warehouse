@@ -13,7 +13,8 @@ A informative warehouse for engineer.
 - [patterns.dev](https://www.patterns.dev/)
 - [docker-cheatsheet](https://dockerlabs.collabnix.com/docker/cheatsheet/)
 - [erd-dbdiagram](https://dbdiagram.io/d)
-
+- [eraser-io](https://eraser.io)
+- [PlantUML](https://plantuml.com/zh/starting)
 
 # 1. set-up terminal and customize
 https://www.youtube.com/watch?v=KwYqtbSwnH8&t=90s&ab_channel=marsela
