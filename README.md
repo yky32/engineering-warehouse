@@ -15,6 +15,7 @@ A informative warehouse for engineer.
 - [erd-dbdiagram](https://dbdiagram.io/d)
 - [eraser-io](https://eraser.io)
 - [PlantUML](https://plantuml.com/zh/starting)
+- [Hash Online](http://www.unit-conversion.info/texttools/base64/)
 
 # 1. set-up terminal and customize
 https://www.youtube.com/watch?v=KwYqtbSwnH8&t=90s&ab_channel=marsela
