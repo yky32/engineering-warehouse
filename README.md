@@ -105,3 +105,10 @@ kubectl apply -f ./$SVC_NAME.yaml
 
 # 6. Git Model
 - https://blog.jetbrains.com/space/2023/04/18/space-git-flow/
+
+# 7. k8s
+svc-url
+```
+<service-name>.<namespace>.svc.cluster.local:<service-port>
+http://example-service.default.svc.cluster.local:9000
+```
