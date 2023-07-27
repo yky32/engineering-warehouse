@@ -111,4 +111,6 @@ svc-url
 ```
 <service-name>.<namespace>.svc.cluster.local:<service-port>
 http://example-service.default.svc.cluster.local:9000
+http://uaa-svc/oauth2/token
+# http://{kind:service.metadata.name}:port/suffix  ___ default-80-no-need-add
 ```
